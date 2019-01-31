@@ -3,15 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideoComponent } from './video-component/video-component.component';
+import { VideoComponentComponent } from './video-component/video-component.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ChapterComponent } from './chapter/chapter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoComponent
+    VideoComponentComponent,
+    ChapterComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
