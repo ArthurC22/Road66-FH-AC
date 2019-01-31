@@ -5,4 +5,5 @@
   </h1>
 </div>
 <app-video-component></app-video-component>
-<app-chapter></app-chapter>
+<app-chapter *ngIf="fileContent" [chapters]="fileContent['Chapters']"></app-chapter>
+<router-outlet></router-outlet>

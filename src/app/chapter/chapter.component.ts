@@ -1,19 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {ChapterService} from '../chapter.service';
+import {Component, Input} from "@angular/core";
+import {Chapter} from "../model/Chapter.model";
 
 @Component({
   selector: 'app-chapter',
   templateUrl: './chapter.component.html',
   styleUrls: ['./chapter.component.css']
 })
-export class ChapterComponent implements OnInit {
+export class ChapterComponent {
 
-  chapters: JSON;
+  @Input() chapters: Chapter[];
 
-  constructor(private chapterService: ChapterService) { }
-
-  ngOnInit() {
-    this.chapterService.getChapter().subscribe(chapters => this.chapters = chapters['Chapters']);
-  }
+  constructor() { }
 
 }
