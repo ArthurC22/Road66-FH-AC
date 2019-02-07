@@ -16,11 +16,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.chapterService.getJsonFile().subscribe(content => this.fileContent = content);
-    console.log(this.fileContent);
   }
 
   onChapterChange(pos: number) {
-    console.log(pos);
     this.videoPos = pos;
   }
 }
