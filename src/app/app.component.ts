@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Chapter} from './model/Chapter.model';
 import {ChapterService} from './chapter.service';
 
 @Component({
@@ -9,6 +8,7 @@ import {ChapterService} from './chapter.service';
 })
 export class AppComponent implements OnInit {
   title = 'Porject 66';
+  videoPos = 0;
 
   fileContent: JSON;
 
@@ -17,5 +17,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.chapterService.getJsonFile().subscribe(content => this.fileContent = content);
     console.log(this.fileContent);
+  }
+
+  onChapterChange(pos: number) {
+    console.log(pos);
+    this.videoPos = pos;
   }
 }

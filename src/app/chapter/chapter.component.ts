@@ -1,5 +1,5 @@
-import {Component, Input} from "@angular/core";
-import {Chapter} from "../model/Chapter.model";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Chapter} from '../model/Chapter.model';
 
 @Component({
   selector: 'app-chapter',
@@ -9,7 +9,11 @@ import {Chapter} from "../model/Chapter.model";
 export class ChapterComponent {
 
   @Input() chapters: Chapter[];
+  @Output() onChapter = new EventEmitter<number>();
 
   constructor() { }
 
+  onSelect(chapter: Chapter) {
+    this.onChapter.emit(chapter.pos);
+  }
 }

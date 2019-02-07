@@ -3,20 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideoComponentComponent } from './video-component/video-component.component';
+import { VideoComponent } from './video-component/video-component.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ChapterComponent } from './chapter/chapter.component';
+import {MatMenuModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoComponentComponent,
+    VideoComponent,
     ChapterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatMenuModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

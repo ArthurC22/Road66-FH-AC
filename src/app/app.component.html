@@ -4,6 +4,9 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<app-video-component></app-video-component>
-<app-chapter *ngIf="fileContent" [chapters]="fileContent['Chapters']"></app-chapter>
+<app-video-component [currentPos]='videoPos'></app-video-component>
+<app-chapter
+  *ngIf="fileContent"
+  [chapters]="fileContent['Chapters']"
+  (onChapter)="onChapterChange($event)"></app-chapter>
 <router-outlet></router-outlet>
