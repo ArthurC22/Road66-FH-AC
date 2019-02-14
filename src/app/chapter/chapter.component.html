@@ -1,6 +1,7 @@
-<button mat-button [matMenuTriggerFor]='chaptersMenu'>Chapters</button>
+<button mat-raised-button class='full-width'
+         [matMenuTriggerFor]='chaptersMenu'>Chapters</button>
 <mat-menu #chaptersMenu>
-  <button mat-menu-item
+  <button mat-menu-item class='full-width'
           *ngFor='let chapter of chapters'
           (click)='onSelect(chapter)'>
     {{chapter.title}}

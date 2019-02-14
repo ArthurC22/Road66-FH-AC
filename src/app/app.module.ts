@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { VideoComponent } from './video-component/video-component.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ChapterComponent } from './chapter/chapter.component';
-import {MatMenuModule} from '@angular/material';
+import {MatButtonModule, MatMenuModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 
@@ -22,6 +22,7 @@ import { MapComponent } from './map/map.component';
     HttpClientModule,
     AppRoutingModule,
     MatMenuModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
