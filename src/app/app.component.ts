@@ -7,7 +7,7 @@ import {ChapterService} from './chapter.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Porject 66';
+  title = 'Project 66';
   videoPos = 0;
 
   fileContent: JSON;

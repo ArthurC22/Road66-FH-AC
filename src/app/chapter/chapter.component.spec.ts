@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChapterComponent } from './chapter.component';
-import {describe, expect} from 'jasmine';
+import {MatButtonModule, MatMenuModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('ChapterComponent', () => {
   let component: ChapterComponent;
@@ -9,6 +9,7 @@ describe('ChapterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports : [MatButtonModule, MatMenuModule, BrowserAnimationsModule],
       declarations: [ ChapterComponent ]
     })
     .compileComponents();
@@ -21,6 +22,6 @@ describe('ChapterComponent', () => {
   });
 
   it('should create', () => {
-    expect(<Function>component).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 });
