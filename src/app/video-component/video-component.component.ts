@@ -16,6 +16,9 @@ export class VideoComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-
 	}
+
+  onTimeUpdate() {
+
+  }
 }

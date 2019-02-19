@@ -11,5 +11,6 @@
 <app-video-component [currentPos]='videoPos'></app-video-component>
 <app-map
   *ngIf="fileContent"
-  [waypoints]="fileContent['Waypoints']"></app-map>
+  [waypoints]="fileContent['Waypoints']"
+  (onMarker)="onChapterChange($event)"></app-map>
 <router-outlet></router-outlet>
